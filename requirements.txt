@@ -1,1 +1,8 @@
 streamlit
+pandas
+requests
+numpy
+pandas
+matplotlib.pyplot
+sqlite3
+typing
