@@ -1,0 +1,11 @@
+import pandas as pd
+import requests
+
+API_URL = "https://data.ny.gov/resource/6nbc-h7bj.json"
+
+def load_df_raw():
+    r = requests.get(API_URL, timeout=30)
+    r.raise_for_status()
+    return pd.DataFrame(r.json())
+
+df_raw = load_df_raw()
