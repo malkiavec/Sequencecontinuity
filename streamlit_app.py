@@ -4,7 +4,7 @@ sys.path.append(os.path.dirname(__file__))
 import streamlit as st
 import pandas as pd
 import requests
-from continuity_page.py import render_continuity_page
+from continuity_page import render_continuity_page
 
 API_URL = "https://data.ny.gov/resource/6nbc-h7bj.json"
 
