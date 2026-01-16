@@ -302,16 +302,7 @@ def render_continuity_page(df_raw: pd.DataFrame) -> None:
     tail_cols = ["draw_date"] + cols7 + ["overlap_prev","continuity_score","continuity_z","regime_break"]
     tail_cols = [c for c in tail_cols if c in df_out.columns]
     st.dataframe(df_out[tail_cols].tail(20).sort_values("draw_date", ascending=False), use_container_width=True)
-
-# ----------------------------
-# Example usage in app.py
-# ----------------------------
-# In your main Streamlit app, after loading df_raw:
-#
-#   from continuity_page import render_continuity_page
-#   render_continuity_page(df_raw)
-#
-# df_raw should include either:
-#   draw_date, winning_numbers, bonus
-# OR
-#   draw_date, num1..num6, bonus
+    #render continuity_page
+    def render_continuity_page(df_raw: pd.DataFrame) -> None:
+    st.header("Continuity Dashboard (Lotto 6/59 + Bonus)")
+    ...
